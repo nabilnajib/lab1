@@ -1,6 +1,11 @@
-form(id="formulaire", method="", action="")
-    p UserName:
-        input(type="text", name= "Name")
-    include discipline
-    include Equipment
-    include Combats
+extends ./layout.jade
+
+block content
+    form(id="formulaire", method="", action="")
+        p UserName:
+            input(type="text", name= "Name")
+        include discipline
+        include Equipment
+        include Combats
+        p
+        input(id="idBtnCommencer", type="button" value="Commencer").buttonNewLine

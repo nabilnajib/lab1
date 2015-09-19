@@ -5,8 +5,11 @@ html
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
         include header
+        br
+        br
+        br
         block content
-        include form.jade
-        p
-        input(id="idBtnCommencer", type="button" value="Commencer").buttonNewLine
-        include footer.jade
+        block foot
+            #footer
+                p Copyright &copy; Log4420, Nabil Tahri et Najib Arbaoui
+        //include footer.jade
