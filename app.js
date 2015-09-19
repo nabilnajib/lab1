@@ -6,6 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var index = require('./routes/index');
+//var page160 = require('./routes/page160');
+//var aide = require('./routes/aide');
+//var creationjoueur = require('./routes/creationjoueur');
+
 var users = require('./routes/users');
 var app = express();
 
