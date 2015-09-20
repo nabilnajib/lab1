@@ -6,10 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var index = require('./routes/index');
-//var page160 = require('./routes/page160');
-//var aide = require('./routes/aide');
-//var creationjoueur = require('./routes/creationjoueur');
+var page160 = require('./routes/');
 
 var users = require('./routes/users');
 var app = express();
@@ -28,6 +25,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.get('/', function(req, res){
+  res.render('index', {
+    title: 'Home'
+  });
+});
+// Routing pages en Express
+app.get('/page160', function(req, res){
+  res.render('page160', {
+    title: 'Page160'
+  });
+});
+
+app.get('/index', function(req, res){
+  res.render('index', {
+    title: 'Accueil'
+  });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
