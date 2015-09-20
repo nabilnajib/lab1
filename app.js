@@ -6,8 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var page160 = require('./routes/');
-
 var users = require('./routes/users');
 var app = express();
 
@@ -25,21 +23,47 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.get('/', function(req, res){
-  res.render('index', {
-    title: 'Home'
-  });
-});
+
 // Routing pages en Express
 app.get('/page160', function(req, res){
   res.render('page160', {
-    title: 'Page160'
+    title: 'Page 160'
+  });
+});
+
+app.get('/page78', function(req, res){
+  res.render('page78', {
+    title: 'Page 78'
+  });
+});
+
+app.get('/form', function(req, res){
+  res.render('form', {
+    title: 'Cr\u00E9ation du joueur'
   });
 });
 
 app.get('/index', function(req, res){
   res.render('index', {
     title: 'Accueil'
+  });
+});
+
+//app.get('/index', function(req, res){
+//  res.render('index', {
+//    title: 'Accueil'
+//  });
+//});
+
+app.get('/page1', function(req, res){
+  res.render('page1', {
+    title: 'Page 1'
+  });
+});
+
+app.get('/aide', function(req, res){
+  res.render('aide', {
+    title: 'R\u00E9gles du jeu'
   });
 });
 
